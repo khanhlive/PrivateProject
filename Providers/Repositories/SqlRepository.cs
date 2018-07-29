@@ -1,4 +1,4 @@
-﻿using Moss.Hospital.Data.Dao.Enum;
+﻿using Moss.Hospital.Data.Common.Enum;
 using System;
 using System.Collections.Generic;
 using System.Data;

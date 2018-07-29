@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using Moss.Hospital.Data.Dao.Enum;
+using Moss.Hospital.Data.Common.Enum;
 using Moss.Hospital.Data.Cache;
 
 namespace Moss.Hospital.Data.Entities

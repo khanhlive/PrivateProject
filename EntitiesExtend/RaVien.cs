@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Moss.Hospital.Data.Dao.Enum;
+using Moss.Hospital.Data.Common.Enum;
 using System.Data.SqlClient;
 using System.Data;
 using Dapper;

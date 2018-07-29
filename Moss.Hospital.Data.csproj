@@ -64,11 +64,10 @@
     <Compile Include="Cache\GlobalCache.cs" />
     <Compile Include="Cache\GlobalCacheService.cs" />
     <Compile Include="Common\Constant.cs" />
-    <Compile Include="Dao\Cipher.cs" />
-    <Compile Include="Dao\Enum\CoreResult.cs" />
-    <Compile Include="Dao\Enum\MossAttribute.cs" />
-    <Compile Include="Dao\Helper.cs" />
-    <Compile Include="Dao\ProviderBase.cs" />
+    <Compile Include="Common\Cipher.cs" />
+    <Compile Include="Common\Enum\CoreResult.cs" />
+    <Compile Include="Common\Enum\MossAttribute.cs" />
+    <Compile Include="Common\Helper.cs" />
     <Compile Include="EntitiesExtend\Asset.cs" />
     <Compile Include="EntitiesExtend\AssetsCate.cs" />
     <Compile Include="EntitiesExtend\AssetsTypes.cs" />

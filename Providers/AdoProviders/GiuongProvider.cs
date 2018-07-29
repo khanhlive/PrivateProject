@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Moss.Hospital.Data.Entities;
-using Moss.Hospital.Data.Dao.Enum;
+using Moss.Hospital.Data.Common.Enum;
 using System.Data;
 
 namespace Moss.Hospital.Data.Providers

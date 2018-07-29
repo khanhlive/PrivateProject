@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using Moss.Hospital.Data.Dao.Enum;
+using Moss.Hospital.Data.Common.Enum;
 using Moss.Hospital.Data.Entities;
 using Moss.Hospital.Data.Providers.Repositories;
 using System;

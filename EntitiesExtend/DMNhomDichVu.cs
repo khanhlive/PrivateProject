@@ -1,5 +1,5 @@
 ﻿using Moss.Hospital.Data.Cache;
-using Moss.Hospital.Data.Dao.Enum;
+using Moss.Hospital.Data.Common.Enum;
 using Moss.Hospital.Data.Providers.Repositories;
 using System;
 using System.Collections.Generic;

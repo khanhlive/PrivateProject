@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Moss.Hospital.Data.Dao.Enum
+namespace Moss.Hospital.Data.Common.Enum
 {
     public class ComboItemValueAttribute: Attribute
     {

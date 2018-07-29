@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity.Validation;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Moss.Hospital.Data.Dao.Enum
+namespace Moss.Hospital.Data.Common.Enum
 {
     public enum CoreStatusCode
     {
