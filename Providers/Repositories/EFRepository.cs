@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Moss.Hospital.Data.Providers.Repositories
 {
-    public abstract class EFRepository<T, KeyType> : MossDataLayerBase where T : class
+    public abstract class EFRepository<T, KeyType> : MossDataLayerBase,IDisposable where T : class
     {
         #region Private Property
 
@@ -43,7 +43,7 @@ namespace Moss.Hospital.Data.Providers.Repositories
 
         #region Get, Find
 
-        public virtual T FindBase(Expression<Func<T, bool>> match)
+        public virtual T Find(Expression<Func<T, bool>> match)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace Moss.Hospital.Data.Providers.Repositories
             }
         }
 
-        public virtual IEnumerable<T> FindAllBase(Expression<Func<T, bool>> match)
+        public virtual IEnumerable<T> FindAll(Expression<Func<T, bool>> match)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace Moss.Hospital.Data.Providers.Repositories
             }
         }
 
-        public virtual IEnumerable<T> GetAllBase()
+        public virtual IEnumerable<T> GetAll()
         {
             try
             {
@@ -117,7 +117,7 @@ namespace Moss.Hospital.Data.Providers.Repositories
             }
         }
 
-        public virtual bool AnyBase(Expression<Func<T, bool>> predicate)
+        public virtual bool Any(Expression<Func<T, bool>> predicate)
         {
             if (mossHospitalEntities != null)
             {
@@ -221,7 +221,6 @@ namespace Moss.Hospital.Data.Providers.Repositories
                 {
                     GetDbContext();
                     return mossHospitalEntities.Set<T>().Find(primaryKey);
-
                 }
             }
             catch (Exception ex)
@@ -370,7 +369,10 @@ namespace Moss.Hospital.Data.Providers.Repositories
             _cacheType = cacheType;
         }
 
-        internal abstract void SetValueUpdate(T oldValue, T newValue);
+        internal virtual void SetValueUpdate(T oldValue, T newValue)
+        {
+
+        }
         #endregion
 
         #region Common Method
@@ -434,8 +436,13 @@ namespace Moss.Hospital.Data.Providers.Repositories
             }
         }
 
+        public void Dispose()
+        {
+            mossHospitalEntities = null;
+            GC.SuppressFinalize(this);
+        }
+
         #endregion
 
     }
-
 }

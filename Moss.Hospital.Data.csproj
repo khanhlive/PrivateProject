@@ -272,6 +272,7 @@
     <Compile Include="Providers\AdoProviders\ThanhToanProvider.cs" />
     <Compile Include="Providers\AdoProviders\ThuocChiDinhProvider.cs" />
     <Compile Include="Providers\AdoProviders\XuatKhoProvider.cs" />
+    <Compile Include="Providers\EntityProviders\AssetCategoryProvider.cs" />
     <Compile Include="Providers\Repositories\EntityFrameworkRepository.cs" />
     <Compile Include="Providers\Repositories\EFRepository.cs" />
     <Compile Include="Providers\EntityProviders\TaiSanProvider.cs" />

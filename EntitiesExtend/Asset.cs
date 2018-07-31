@@ -17,18 +17,18 @@ namespace Moss.Hospital.Data.Entities
         {
             CheckValidEntity();
             using (TaiSanProvider provider = new TaiSanProvider())
-                {
-                    return provider.Delete(AssetsID, userId, checkPermission);
-                }
+            {
+                return provider.Delete(AssetsID, userId, checkPermission);
+            }
         }
 
         public CoreResult Exist()
         {
             CheckValidEntity();
-                using (TaiSanProvider provider = new TaiSanProvider())
-                {
-                    return provider.Exist(AssetsID);
-                }
+            using (TaiSanProvider provider = new TaiSanProvider())
+            {
+                return provider.Exist(AssetsID);
+            }
         }
 
         public CoreResult Get()

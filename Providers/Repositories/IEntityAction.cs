@@ -90,4 +90,13 @@ namespace Moss.Hospital.Data.Providers.Repositories
     {
         T GetByPrimaryKey(string primaryKey);
     }
+
+    public interface IProviderCode<T> where T:class
+    {
+        T GetByCode(string code);
+    }
+    public interface IEntityCode<T> where T : class
+    {
+        void GetByCode(string code);
+    }
 }

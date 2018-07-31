@@ -88,33 +88,13 @@ namespace Moss.Hospital.Data.Providers
                 throw e;
             }
         }
-
-        public IEnumerable<Asset> FindAll(Expression<Func<Asset, bool>> match)
-        {
-            return FindAllBase(match);
-        }
-
-        public IEnumerable<Asset> GetAll()
-        {
-            return GetAllBase();
-        }
-
-        public Asset Find(Expression<Func<Asset, bool>> match)
-        {
-            return FindBase(match);
-        }
-
-        public bool Any(Expression<Func<Asset, bool>> predicate)
-        {
-            return AnyBase(predicate);
-        }
-
+        
         public CoreResult Insert(Asset entity, int? userId = null, bool checkPermission = false)
         {
             try
             {
                 GetDbContextCRUD();
-                var permission = CheckPermission(userId, checkPermission, ActionType.Edit);
+                var permission = CheckPermission(userId, checkPermission, ActionType.Insert);
                 if (permission.Item1)
                 {
                     #region Set default value
@@ -182,12 +162,6 @@ namespace Moss.Hospital.Data.Providers
             {
                 throw e;
             }
-        }
-
-        public void Dispose()
-        {
-            mossHospitalEntities = null;
-            GC.SuppressFinalize(this);
         }
 
         internal override void SetValueUpdate(Asset oldValue, Asset newValue)
